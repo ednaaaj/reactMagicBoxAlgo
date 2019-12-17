@@ -10,7 +10,7 @@ class App extends Component {
             <div className="app-container">
                 <h1 className="game-title">Magic Box</h1>
                 <div className="instruction-container">
-                    <div>Input any odd number from 1-100 only!</div>          
+                    <div>Input any odd number from 1-20 only!</div>          
                 </div>
                 <GRID />      
 

@@ -5,7 +5,7 @@ class box extends Component {
     state = {  
         el: [],
         willMount: false,
-        result: '',
+        result: false,
         all: 1
     }
 
@@ -119,25 +119,26 @@ class box extends Component {
             })
 
             setTimeout(() => {
-                let sum = this.props.odd*(Math.pow(this.props.odd,2)+1)/2;
+                
                 for(let i = size; i >= 1; i--){
                     setTimeout(()=>{
                         document.querySelector(`.col-${i}`).classList.add('darkRed');
                     }, i * 50)
                     
-                    this.setState({result: `All sides diagonally,vertically or horizontal are now equal to ${sum}`});
+                    this.setState({result:true});
                     
                 }
             },size * 75);
 
         
 
-        }, size * 700);
+        }, size * 500);
 
 
       
     }
     render() { 
+        let result = this.props.odd*(Math.pow(this.props.odd,2)+1)/2;
         if(this.state.willMount){
             return(
                 <div>
@@ -153,7 +154,10 @@ class box extends Component {
                         })
                     }
                     <br></br>
-                    {this.state.result}
+                    <br/>
+                    <br/>
+                    {
+                    this.state.result ? <div><h3>All sides diagonally,vertically or horizontal are now equal to <span style={{color:'red'}}>{result} </span> </h3></div> : ''}
                 </div>
             )
         }else{

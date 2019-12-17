@@ -38,13 +38,13 @@ class grid extends Component {
 
     keyDown = event => {
         if(event.which === 13 || event.keyCode === 13){
-           if(this.state.keyValue % 2 != 0 && (this.state.keyValue > 0 && this.state.keyValue < 100)){
+           if(this.state.keyValue % 2 != 0 && (this.state.keyValue > 0 && this.state.keyValue < 20)){
                this.setState({erroValue: '',check: true});
                
                
             }                
            else{
-                this.setState({erroValue: "Please input odd number 1-100 only!!"});
+                this.setState({erroValue: "Please input odd number 1-20 only!!"});
                 this.setState({check: false});
             }
 
