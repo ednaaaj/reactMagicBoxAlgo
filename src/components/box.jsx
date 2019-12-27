@@ -66,15 +66,16 @@ class box extends Component {
         for(let i = 1; i<= size;i++){
             let id =  document.querySelector(`.col-${i}`);
            
-                setTimeout(()=>{
-                    
-                    
+                setInterval(()=>{
+                  
                     id.classList.add('addSomeStyle');
                     setTimeout(()=>{
                         id.innerHTML = i;
+
                     },200)
-                
-                },i * 300)
+                   
+                    
+                }, i * 300)
                 
             id.classList.remove('addSomeStyle');
         
@@ -129,8 +130,6 @@ class box extends Component {
                     
                 }
             },size * 75);
-
-        
 
         }, size * 500);
 
