@@ -1,3 +1,6 @@
+## Magic Box Algorithm in React
+to test this out you can click this link -> https://sharp-noether-c7216d.netlify.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
